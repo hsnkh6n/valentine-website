@@ -1,80 +1,90 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Surprise</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+        .envelope {
+            width: 100px;
+            height: 60px;
+            background-color: #ff6b81;
+            position: relative;
+            margin: 20px auto;
+            clip-path: polygon(0% 0%, 50% 50%, 100% 0%, 100% 100%, 0% 100%);
+        }
+        .envelope:before {
+            content: "";
+            width: 100%;
+            height: 50%;
+            background-color: #ffa1b0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Valentine's Card&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="description" content="Send a cute valentine to your crush"/&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS CDN --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Google Fonts --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;family=Caveat:wght@700&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Preload Assets --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="modulepreload" href="path/to/your/manifest.js"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="modulepreload" href="path/to/your/entry.client.js"/&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body style="font-family:Poppins, sans-serif"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- No Script Tag for GTM --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;noscript&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;iframe title="gtm" src="https://www.googletagmanager.com/ns.html?id=GTM-KFRSNWJ6" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/noscript&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Main Content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="min-h-screen bg-[#FDF6EC] flex items-center justify-center p-4 overflow-hidden w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="relative w-full max-w-2xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute left-1/2 top-1/2 w-full max-w-[700px] aspect-[1.4/1] bg-[#E74C3C] rounded-lg shadow-lg p-6 flex items-center justify-center cursor-pointer transform -translate-x-1/2 -translate-y-1/2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="absolute top-4 right-4 md:size-24 size-16"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="path/to/your/stamp.png" alt="Decorative stamp" class="w-full h-full object-contain"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-white text-3xl md:text-5xl" style="font-family:Caveat Variable;font-weight:700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>For You</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- JavaScript to handle scroll position --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>((STORAGE_KEY2, restoreKey) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!window.history.state || !window.history.state.key) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>let key2 = Math.random().toString(32).slice(2);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>window.history.replaceState({</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>key: key2</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}, "");</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>let positions = JSON.parse(sessionStorage.getItem(STORAGE_KEY2) || "{}");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>let storedY = positions[restoreKey || window.history.state.key];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (typeof storedY === "number") {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>window.scrollTo(0, storedY);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.error(error);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>sessionStorage.removeItem(STORAGE_KEY2);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>})("positions", null);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Additional Scripts (you can add other necessary JS files here) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="path/to/your/js/script.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+    <h1 class="text-4xl font-bold text-white">Happy Valentine's Day!</h1>
+    <p class="text-xl text-white mt-2">Here's a little surprise for you!</p>
+
+    <div class="envelope"></div>
+
+    <div class="btn-container">
+        <button class="yes-btn px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-lg hover:bg-red-400">
+            Yes
+        </button>
+        <button class="no-btn px-6 py-3 bg-gray-500 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-400">
+            No
+        </button>
+    </div>
+
+    <audio id="valentine-music" loop>
+        <source src="https://example.com/your-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.querySelector('.yes-btn').addEventListener('click', () => {
+            const audio = document.getElementById('valentine-music');
+            audio.play();
+            alert('Enjoy the music and animations! 💖');
+        });
+
+        document.querySelector('.no-btn').addEventListener('click', () => {
+            alert('Maybe next time! 💔');
+            gsap.to('.no-btn', {
+                x: "random(-300, 300)",
+                y: "random(-300, 300)",
+                duration: 0.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        });
+
+        gsap.to(".envelope", {
+            y: -20,
+            duration: 0.6,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+    </script>
+
 </body>
 </html>
